@@ -229,6 +229,7 @@
                     name="tk"
                     id="tknv"
                     class="form-control input-sm"
+                    oninput="validateId()"
                     placeholder="Tài khoản"
                   />
                 </div>
@@ -248,6 +249,7 @@
                     name="name"
                     id="name"
                     class="form-control input-sm"
+                    oninput="validateName()"
                     placeholder="Họ và tên"
                   />
                 </div>
@@ -266,6 +268,7 @@
                     name="email"
                     id="email"
                     class="form-control input-sm"
+                    oninput="validateEmail()"
                     placeholder="Email"
                   />
                 </div>
@@ -285,6 +288,7 @@
                     name="password"
                     id="password"
                     class="form-control input-sm"
+                    oninput="validatePassword()"
                     placeholder="Mật khẩu"
                   />
                 </div>
@@ -303,6 +307,7 @@
                     name="ngaylam"
                     id="datepicker"
                     class="form-control"
+                    oninput="validateWorkday()"
                     placeholder="Ngày làm"
                   />
                 </div>
@@ -322,6 +327,7 @@
                     name="luongCB"
                     id="luongCB"
                     class="form-control input-sm"
+                    oninput="validateSalary()"
                     placeholder="Lương cơ bản"
                   />
                 </div>
@@ -334,7 +340,11 @@
                       ><i class="fa fa-briefcase"></i
                     ></span>
                   </div>
-                  <select class="form-control" id="chucvu">
+                  <select
+                    class="form-control"
+                    id="chucvu"
+                    oninput="validateRegency()"
+                  >
                     <option value="">Chọn chức vụ</option>
                     <option value="Sếp">Sếp</option>
                     <option value="Trưởng phòng">Trưởng phòng</option>
@@ -375,7 +385,7 @@
               Thêm người dùng
             </button>
             <button
-              id="btnreset"
+              id="btnThemNV"
               type="button"
               class="btn btn-success"
               onclick="resetForm()"
@@ -429,7 +439,6 @@
         });
       });
     </script>
-
     <script src="./js/main.js"></script>
   </body>
 </html>
