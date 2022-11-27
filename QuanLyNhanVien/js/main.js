@@ -135,9 +135,9 @@ function searchStaff() {
   searchValue = searchValue.toLowerCase();
 
   let newStaff = staffs.filter((staff) => {
-    let name = staff.getRank().toLowerCase();
+    let rank = staff.getRank().toLowerCase();
 
-    return name.includes(searchValue);
+    return rank.includes(searchValue);
   });
 
   display(newStaff);
@@ -165,7 +165,7 @@ function updateStaff() {
   );
 
   let index = staffs.findIndex((item) => {
-    return (item.id = staff.id);
+    return (item.id === staff.id);
   });
 
   staffs[index] = staff;
